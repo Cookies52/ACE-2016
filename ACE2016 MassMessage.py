@@ -47,7 +47,8 @@ while index < 40:
 
         #API query to send
         send_message = pywikibot.data.api.Request(site=site, action='massmessage', spamlist=list_source, subject=message_subject, message="{{subst:Wikipedia:Arbitration Committee Elections December 2016/MassMessage}}", token = getToken())
-
+        response = send_message.submit()
+        print(response)
     else:
         #wait 60s before retrying
         time.sleep(60)
