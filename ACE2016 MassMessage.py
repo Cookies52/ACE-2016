@@ -36,11 +36,11 @@ index = 2 #page 1 is for testing reasons only
 
 
 while index < 40:
-    if queued_message < 50:
+    if queued_messages < 50:
         #then send!
 
         ##Define what page to get from
-        list_source = "User:Mdann52 bot/spamlist/" + index
+        list_source = "User:Mdann52 bot/spamlist/" + str(index)
 
         ##define subject etc.
         message_subject = "[[WP:ACE2016|ArbCom Elections 2016]]: Voting now open!"
@@ -52,5 +52,3 @@ while index < 40:
     else:
         #wait 60s before retrying
         time.sleep(60)
-    
-
